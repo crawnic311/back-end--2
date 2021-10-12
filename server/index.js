@@ -9,10 +9,10 @@ app.use(cors())
 
 const controller = require('./controller')
 
-app.get('api/houses/', controller.getHouses)
-app.get('api/houses/', controller.createHouse)
-app.get('api/houses/:id', controller.updateHouse)
-app.get('api/houses/:id', controller.deleteHouse)
+app.get('/api/houses', controller.getHouses)
+app.post('/api/houses', controller.createHouse)
+app.put('/api/houses/:id', controller.updateHouse)
+app.delete('/api/houses/:id', controller.deleteHouse)
 
 
 
